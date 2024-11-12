@@ -1,0 +1,35 @@
+.login {
+  background-color: #f5385d;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .lContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+
+    .lInput {
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+    }
+
+    .lButton {
+      border: none;
+      padding: 10px 20px;
+      background-color: #c1121f;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+
+      &.disabled {
+        background-color: gray;
+      }
+    }
+  }
+}

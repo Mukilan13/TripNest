@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.header_list_item.active {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.date {
+  position: absolute;
+  top: 50px;
+  z-index: 10;
+}
+
+.optionCounterButton:disabled {
+  cursor: not-allowed;
+}
+
+.fListItem {
+  margin-bottom: 10px;
+  color: #c1121f;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.lButton:disabled {
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+
+/* Calender Customization */
+.rdrDayInPreview {
+  color: #F5385D !important;
+}
+
+.rdrStartEdge,
+.rdrEndEdge,
+.rdrInRange {
+  background-color: #F5385D !important;
+}
+
+.rdrDayHovered {
+  color: #F5385D !important;
+}
+
+.rdrDayStartPreview,
+.rdrDayEndPreview {
+  color: #F5385D !important;
+}
+
+.rdrDayHovered .rdrDayInPreview .rdrDayNumber {
+  color: #F5385D !important;
+}
+
+.rdrDayToday .rdrDayNumber span:after {
+  background: #F5385D !important;
+}
