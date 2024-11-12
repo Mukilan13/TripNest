@@ -9,7 +9,12 @@ import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
 
 const app = express();
-app.use(cors()); // Enable CORS for all routes
+app.use(
+  cors({
+    origin:[ "http://localhost:5173", "http://localhost:5174"], // Frontend URLs
+    credentials: true,
+  })
+); // Enable CORS for all routes
 dotenv.config();
 
 const connectToMongoDB = async () => {

@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../context/AuthContext";
 import "./login.scss";
+import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -22,7 +22,11 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/auth/login`, credentials);
+      const res = await axios.post(
+        `${import.meta.env.VITE_API_URL}/auth/login`,
+        credentials,
+        { withCredentials: true }
+      );
       if (res.data.isAdmin) {
         dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
 
@@ -44,7 +48,7 @@ const Login = () => {
         <input
           type="text"
           placeholder="Username"
-          id="sername"
+          id="username"
           onChange={handleChange}
           className="lInput"
         />

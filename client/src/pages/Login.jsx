@@ -23,7 +23,8 @@ const Login = () => {
     try {
       const res = await axios.post(
         `${import.meta.env.VITE_API_URL}/auth/login`,
-        credentials
+        credentials,
+        { withCredentials: true }
       );
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
       navigate("/");
