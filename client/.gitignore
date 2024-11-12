@@ -7,10 +7,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency directories
 node_modules
 dist
 dist-ssr
+build
+
+# Local and environment files
 *.local
+.env
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +27,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# OS-specific files
+Thumbs.db
+
+# TypeScript and testing outputs (if applicable)
+*.tsbuildinfo
+.nyc_output
+coverage
