@@ -1,0 +1,26 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "25e737ec-4673-41a3-8fe1-97b2b8aa8bc1",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1731436710882"
+        }
+      },
+      "favorite": {
+        "name": "TripNest"
+      },
+      "savedConnectionType": "recent",
+      "connectionOptions": {
+        "connectionString": "mongodb+srv://mukilanmuki23:KZl3wMJruv9rRxkk@tripnest.noqc7.mongodb.net/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjowLCJzdGF0ZSI6W119"
+        }
+      }
+    }
+  ]
+}
