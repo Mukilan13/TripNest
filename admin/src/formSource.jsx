@@ -1,44 +1,38 @@
 export const userInputs = [
   {
-    id: 1,
+    id: "username",
     label: "Username",
     type: "text",
-    placeholder: "john_doe",
+    placeholder: "Test",
   },
   {
-    id: 2,
-    label: "Name and surname",
-    type: "text",
-    placeholder: "John Doe",
-  },
-  {
-    id: 3,
+    id: "email",
     label: "Email",
-    type: "mail",
-    placeholder: "john_doe@gmail.com",
+    type: "email",
+    placeholder: "test@gmail.com",
   },
   {
-    id: 4,
+    id: "phone",
     label: "Phone",
     type: "text",
-    placeholder: "+1 234 567 89",
+    placeholder: "+91 0123456789",
   },
   {
-    id: 5,
+    id: "password",
     label: "Password",
     type: "password",
   },
   {
-    id: 6,
-    label: "Address",
-    type: "text",
-    placeholder: "Elton St. 216 NewYork",
-  },
-  {
-    id: 7,
+    id: "country",
     label: "Country",
     type: "text",
-    placeholder: "USA",
+    placeholder: "India",
+  },
+  {
+    id: "city",
+    label: "City",
+    type: "text",
+    placeholder: "India",
   },
 ];
 
@@ -72,5 +66,89 @@ export const productInputs = [
     label: "Stock",
     type: "text",
     placeholder: "in stock",
+  },
+];
+
+export const hotelInputs = [
+  {
+    id: "name",
+    label: "Name",
+    type: "text",
+    placeholder: "My Hotel",
+  },
+  {
+    id: "type",
+    label: "Type",
+    type: "text",
+    placeholder: "Hotel, Apartment, etc...",
+  },
+  {
+    id: "city",
+    label: "City",
+    type: "text",
+    placeholder: "Chennai, Kerala, etc...",
+  },
+  {
+    id: "address",
+    label: "Address",
+    type: "text",
+    placeholder: "Door no, street, ...",
+  },
+  {
+    id: "distance",
+    label: "Distance from City Center in Meters",
+    type: "text",
+    placeholder: "500",
+  },
+  {
+    id: "title",
+    label: "Title",
+    type: "text",
+    placeholder: "The best Hotel",
+  },
+  {
+    id: "description",
+    label: "Description",
+    type: "text",
+    placeholder: "Description",
+  },
+  {
+    id: "cheapestPrice",
+    label: "Price",
+    type: "text",
+    placeholder: "1000",
+  },
+  {
+    id: "rating",
+    label: "Rating",
+    type: "number",
+    placeholder: "Max 10",
+  },
+];
+
+export const roomInputs = [
+  {
+    id: "title",
+    label: "Title",
+    type: "text",
+    placeholder: "2 bed room",
+  },
+  {
+    id: "description",
+    label: "Description",
+    type: "text",
+    placeholder: "King size bed, 1 bathroom",
+  },
+  {
+    id: "price",
+    label: "Price",
+    type: "number",
+    placeholder: "1000",
+  },
+  {
+    id: "maxPeople",
+    label: "Max People",
+    type: "number",
+    placeholder: "2",
   },
 ];

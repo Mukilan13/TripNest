@@ -22,7 +22,7 @@ const List = () => {
     `${
       import.meta.env.VITE_API_URL
     }/hotels?city=${destination.toLowerCase()}&min=${min || 0}&max=${
-      max || 1999
+      max || 19999
     }`
   );
 

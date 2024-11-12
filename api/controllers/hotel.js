@@ -51,7 +51,7 @@ export const getHotels = async (req, res, next) => {
       ...others,
       cheapestPrice: {
         $gt: parseInt(min, 10) || 1,
-        $lt: parseInt(max, 10) || 1999,
+        $lt: parseInt(max, 10) || 19999,
       },
     }).limit(parseInt(limit, 10) || 0); // 0 means no limit if limit is not provided
 

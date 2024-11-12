@@ -30,6 +30,9 @@ const Hotel = () => {
   const { data, loading, error } = useFetch(
     `${import.meta.env.VITE_API_URL}/hotels/find/${id}`
   );
+  const { photos } = data;
+  console.log(photos);
+
   const { user } = useContext(AuthContext);
 
   const { dates, options } = useContext(SearchContext);
@@ -76,7 +79,7 @@ const Hotel = () => {
         "Loading ..."
       ) : (
         <div className="hotelContainer flex flex-col items-center">
-          {/* {open && (
+          {open && (
             <div className="slider sticky top-[0] left-[0] z-10 w-screen h-screen bg-[rgba(0,_0,_0,_0.613)] flex items-center">
               <FontAwesomeIcon
                 icon={faCircleXmark}
@@ -90,7 +93,7 @@ const Hotel = () => {
               />
               <div className="sliderWrapper w-full h-full flex justify-center items-center">
                 <img
-                  src={photos[slideNumber].src}
+                  src={photos[slideNumber]}
                   alt=""
                   className="sliderImg w-4/5 h-[80vh]  rounded-[10px]"
                 />
@@ -101,7 +104,7 @@ const Hotel = () => {
                 onClick={() => handleMove("r")}
               />
             </div>
-          )} */}
+          )}
           <div className="hotelWrapper w-full max-w-screen-lg flex flex-col gap-[10px] relative pt-8">
             <button
               onClick={handleClick}
@@ -121,18 +124,19 @@ const Hotel = () => {
               Book a stay over ₹{data.cheapestPrice} at this property and get a
               free airport taxi
             </span>
-            {/* <div className="hotelImages flex flex-wrap justify-between gap-1">
-              {photos.map((photo, i) => (
-                <div className="hotelImgWrapper w-[33%]" key={i}>
-                  <img
-                    onClick={() => handleOpen(i)}
-                    src={photo.src}
-                    alt=""
-                    className="hotelImg w-full object-cover cursor-pointer"
-                  />
-                </div>
-              ))}
-            </div> */}
+            <div className="hotelImages flex flex-wrap justify-between gap-1">
+              {photos &&
+                photos.map((photo, i) => (
+                  <div className="hotelImgWrapper w-[33%]" key={i}>
+                    <img
+                      onClick={() => handleOpen(i)}
+                      src={photo}
+                      alt=""
+                      className="hotelImg w-full object-cover cursor-pointer"
+                    />
+                  </div>
+                ))}
+            </div>
             <div className="hotelDetails flex justify-between gap-[20px] mt-[20px]">
               <div className="hotelDetailsTexts flex-[3_1]">
                 <h1 className="hotelTitle text-2xl font-bold">
@@ -149,8 +153,10 @@ const Hotel = () => {
                   excellent location score of {data.rating}!
                 </span>
                 <h2 className="font-light text-2xl">
-                  <b className="font-bold text-2xl">₹{days * data.cheapestPrice * options.room}</b> (
-                  {days} {days === 1 ? "night" : "nights"})
+                  <b className="font-bold text-2xl">
+                    ₹{days * data.cheapestPrice * options.room}
+                  </b>{" "}
+                  ({days} {days === 1 ? "night" : "nights"})
                 </h2>
                 <button
                   onClick={handleClick}
